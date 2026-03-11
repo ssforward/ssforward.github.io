@@ -229,6 +229,13 @@ body {
   transform: scale(1.15);
 }
 
+/* iOS Safari does not support background-attachment: fixed reliably */
+@supports (-webkit-touch-callout: none) {
+  #intro {
+    background-attachment: scroll;
+  }
+}
+
 @media (max-width: 767px) {
   #intro {
     background-attachment: scroll;
